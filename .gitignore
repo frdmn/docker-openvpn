@@ -1,0 +1,4 @@
+.env
+data/config/*
+!data/config/.gitkeep
+*.ovpn
