@@ -76,6 +76,14 @@ Or in case you want to remove them permanetly as well:
 docker-compose run --rm openvpn ovpn_revokeclient ${CLIENTNAME} remove
 ```
 
+#### Create `.ovpn` client configuration file 
+
+```bash
+docker-compose run --rm openvpn ovpn_getclient ${CLIENTNAME} > ${CLIENTNAME}.ovpn
+```
+
+Then just transfer the `${CLIENTNAME}.ovpn` file to your client machine and import it into your OpenVPN client software.
+
 #### Debug mode
 
 Just pass the `DEBUG=1` environment variable to the container:
